@@ -7,6 +7,10 @@ export default makeStyles((theme) => ({
       display: "block",
     },
   },
+  navbar: {
+    backgroundColor: "black",
+    marginBottom: "1rem",
+  },
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,

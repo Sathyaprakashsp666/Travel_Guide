@@ -19,9 +19,9 @@ const PlaceDetails = ({ place }) => {
   // console.log('data is ' + places)
   const classes = useStyles();
   return (
-    <Card elevation={6}>
+    <Card elevation={6} className={classes.cont}>
       <CardMedia
-        style={{ height: 350 }}
+        style={{ height: 250 }}
         image={
           place.photo
             ? place.photo.images.large.url
@@ -34,7 +34,7 @@ const PlaceDetails = ({ place }) => {
           {place.name}
         </Typography>
         <Box display="flex" justifyContent="space-between">
-          <Typography component="legend">Price</Typography>
+          <Typography component="legend">Price :</Typography>
           <Typography gutterBottom variant="subtitle1">
             {place.price_level}
           </Typography>
@@ -97,10 +97,18 @@ const PlaceDetails = ({ place }) => {
       </CardContent>
       {/* onClick to open website in new page */}
       <CardActions>
-        <Button size="small" color="primary" onClick={() => window.open(place.web_url, '_blank')}>
+        <Button
+          size="small"
+          color="primary"
+          onClick={() => window.open(place.web_url, "_blank")}
+        >
           Trip Advisor
         </Button>
-        <Button size="small" color="primary" onClick={() => window.open(place.website, '_blank')}>
+        <Button
+          size="small"
+          color="primary"
+          onClick={() => window.open(place.website, "_blank")}
+        >
           Website
         </Button>
       </CardActions>

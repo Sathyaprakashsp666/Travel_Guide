@@ -13,7 +13,7 @@ const App = () => {
   const [bounds, setBounds] = useState({});
 
   const [type, setType] = useState("hotels");
-  const [rating, setRating] = useState("");
+  const [rating, setRating] = useState(0);
 
   const [filteredPlaces, setFilteredPlaces] = useState([]);
 
@@ -51,7 +51,7 @@ const App = () => {
     <>
       <CssBaseline />
       <Header setCoords={setCoords} />
-      <Grid container spacing={3} style={{ width: "100%" }}>
+      <Grid container spacing={3} style={{ width: "100%"}}>
         <Grid item xs={12} md={4}>
           <List
             places={filteredPlaces.length ? filteredPlaces : places}

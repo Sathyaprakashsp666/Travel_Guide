@@ -1,16 +1,25 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles(() => ({
   paper: {
-    padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100px',
+    padding: "10px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    width: "100px",
   },
   mapContainer: {
-    height: '85vh', width: '100%',
+    height: "90vh",
+    width: "100%",
+    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
   },
   markerContainer: {
-    position: 'absolute', transform: 'translate(-50%, -50%)', zIndex: 1, '&:hover': { zIndex: 2 },
+    position: "absolute",
+    transform: "translate(-50%, -50%)",
+    zIndex: 1,
+    "&:hover": { zIndex: 2 },
   },
   pointer: {
-    cursor: 'pointer',
+    cursor: "pointer",
   },
 }));

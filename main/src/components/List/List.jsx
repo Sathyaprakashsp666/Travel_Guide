@@ -8,9 +8,11 @@ import {
   FormControl,
   Select,
 } from "@material-ui/core";
-import { mergeClasses } from "@material-ui/styles";
 import useStyles from "./styles";
 import PlaceDetails from "../placeDetails/placeDetails";
+import HotelIcon from '@material-ui/icons/Hotel';
+import RestaurantIcon from '@material-ui/icons/Restaurant';
+import PlaceIcon from '@material-ui/icons/Place';
 
 const List = ({ places, type, setType, rating, setRating, isLoading }) => {
   const classes = useStyles();
@@ -21,12 +23,13 @@ const List = ({ places, type, setType, rating, setRating, isLoading }) => {
     <div className={classes.container}>
       {isLoading ? (
         <div className={classes.loading}>
-          <CircularProgress size="5rem" />
+          <CircularProgress size="5rem" color="secondary" />
+          <Typography variant="h5">Please wait loading.....</Typography>
         </div>
       ) : (
         <>
-          <Typography variant="h4">
-            Restaurents, Hotels & Attractions around you
+          <Typography variant="h5">
+            Restaurents <RestaurantIcon/>,<br/> Hotels <HotelIcon/> <br/>& Attractions around you <PlaceIcon/>
           </Typography>
 
           <FormControl className={classes.formControl}>
